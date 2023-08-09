@@ -9,22 +9,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:strawberry_chocolate/main.dart';
+import 'package:strawberry_chocolate/presentation/widgets/header.dart';
+import 'package:strawberry_chocolate/presentation/widgets/footer.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
+    // Check if the Header widget is found
+    expect(find.byType(HeaderWidget),
+        findsOneWidget); // Replace HeaderWidget with the actual type of your header widget
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Check if the Footer widget is found
+    expect(find.byType(FooterWidget),
+        findsOneWidget); // Replace FooterWidget with the actual type of your footer widget
   });
 }
