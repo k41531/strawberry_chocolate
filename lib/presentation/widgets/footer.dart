@@ -10,12 +10,15 @@ class FooterWidget extends StatelessWidget {
     // These are allign row.
     // The icon has underline.
     // When it focused, the underline displayed is changed.
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Icon(Icons.home_filled),
-        Icon(Icons.settings),
-      ],
-    );
+    return BottomNavigationBar(items: const [
+      BottomNavigationBarItem(
+        icon: Icon(Icons.home_filled),
+        label: 'home',
+      ),
+      BottomNavigationBarItem(
+        icon: Icon(Icons.settings),
+        label: 'settings',
+      ),
+    ]);
   }
 }

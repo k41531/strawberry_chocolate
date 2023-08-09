@@ -5,16 +5,11 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // This is the header widget
-    // Header contains, "todo" and "memo"
-    // These are allign row.
-    // The text has underline.
-    // When it focused, the underline displayed is changed.
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Text('todo'),
-        Text('memo'),
+        Text('todo', style: TextStyle(fontSize: 16)),
+        Text('memo', style: TextStyle(fontSize: 16)),
       ],
     );
   }
